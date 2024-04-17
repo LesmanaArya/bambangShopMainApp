@@ -91,3 +91,8 @@ This is the place for you to write reflections:
 3. Postman is a good tool for testing API and other development request. Postman also allowed some useful features like automated testing, collaboration tools, monitoring, and mock servers to help developer while managing their work. Postman also have multiple environment features which allow us to do some testing using multiple enviroment and condition. 
 
 #### Reflection Publisher-3
+1. We are using push model in this tutorial because it uses push data to send notification if user invoke update method. The delivery of the notification is also directly pushes to Subscriber so it's matched with Push Model.
+
+2. By using pull model, Subscriber will only request or pull data from Publisher when it's needed. In some condition, it may reduce many data retrival or some overhead retrival. Using this model however, will increased implementation because we have to logic for pulling that data while also exposed the Subscriber to the Publisher which can cause some security issue.
+
+3. The process of sending notification will not efficient and will take longer time. Without using multi threading, the notification will be delivered sequentially which will caused delay and inefficiency. The disadvantage and delay will increase exponentially if we have many more subsriber in our application.
