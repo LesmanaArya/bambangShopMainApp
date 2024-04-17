@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 3. Singleton is not really good when using rust. This is because rust's concept like of borrowing ownership and multiple shared of mutable state required additional synchronization mechanisms like Mutex or RwLock to ensure thread safety. Meanwhile, DashMap already have some built in concurrency and efficient lookup method and of course, fully integrated with rust. So it's better if we use DashMap for implementation instead of implementing Singleton
 
 #### Reflection Publisher-2
+1. Separating Service and Repository is to apply SRP Principle in our project. Each layer will only have one responsibility so they can focus on specific task. Service will focus on handling appliaction logic while Repository will focus on handling data usage. This will increased maintanibility and flexibility because each layer can be extended or improved independently and not affect other layer.
+
+2. Each Model will have to handle their application logic and data handling themselves. This will result in complex and long code and will be hard to maintenance because Model have too much responsibility instead of one. There also be many code duplication lack of clarity so furthermore will increase difficulty of maintenance.
+
+3. Postman is a good tool for testing API and other development request. Postman also allowed some useful features like automated testing, collaboration tools, monitoring, and mock servers to help developer while managing their work. Postman also have multiple environment features which allow us to do some testing using multiple enviroment and condition. 
 
 #### Reflection Publisher-3
