@@ -1,4 +1,4 @@
-# BambangShop Publisher App
+ # BambangShop Publisher App
 Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
 
 ---
@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Yes, but not really mandatory. Using an interface for the Subscriber in Observer design pattern in the BambangShop case can give some numerous advantages. It increases abstraction and separates the subject from its observers, making testing easier and enhancing both flexibility and scalability. Also, by using interfaces, we can maintain consistency and mandate particular behaviors for Subscribers. However, in current condition, since Subscriber only have some simple behavior like there's only one type of subscriber, using a single Model struct to represent subscribers is enough.
+
+2. While DashMap is behave like regular HashMap in Java, Vec is more act like a List. I think it's better to use DashMap instead of vec. DashMap can guarantee uniqueness and provide more efficient lookup operation using that unique key like this example with id and program. Vec however, we must iterate over the entire list to check if there's some duplicate and thus will not be as efficient as DashMap. Therefore, using a DashMap would be more efficient, providing both integrity and performance to the system.
+
+3. Singleton is not really good when using rust. This is because rust's concept like of borrowing ownership and multiple shared of mutable state required additional synchronization mechanisms like Mutex or RwLock to ensure thread safety. Meanwhile, DashMap already have some built in concurrency and efficient lookup method and of course, fully integrated with rust. So it's better if we use DashMap for implementation instead of implementing Singleton
 
 #### Reflection Publisher-2
 
